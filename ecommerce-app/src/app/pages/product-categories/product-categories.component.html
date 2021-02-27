@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="categories" *ngFor="let item of categories" [routerLink]="['/product-list']">
+    <div class="categories" *ngFor="let item of categories" [routerLink]="['/product-list']" queryParamsHandling="merge" [queryParams]="{category: item.label}">
         <div class="img">
             <img src="{{item.image}}" />
         </div>

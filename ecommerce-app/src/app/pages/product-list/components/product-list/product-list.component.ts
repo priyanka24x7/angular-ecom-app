@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/shared/services/api/api.service';
 
 @Component({
@@ -8,17 +9,25 @@ import { ApiService } from 'src/app/shared/services/api/api.service';
 })
 export class ProductListComponent implements OnInit {
   productList: any;
-
+  params: any;
   constructor(
-    public api: ApiService
+    public api: ApiService,
+    private actRoute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.getProductList();
+    this.actRoute.queryParams.subscribe((param) => {
+      this.params = param;
+      if(this.params) {
+        this.getProductList('/category/' + this.params.category);
+      } else {
+        this.getProductList();
+      }
+    });
   }
 
-  getProductList(){
-    this.api.get('products').subscribe((res) => {
+  getProductList(url?:any){
+    this.api.get('products'+ url).subscribe((res) => {
       this.productList = res;
     })
   }

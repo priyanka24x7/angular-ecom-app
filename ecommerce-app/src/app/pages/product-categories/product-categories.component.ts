@@ -10,7 +10,7 @@ export class ProductCategoriesComponent implements OnInit {
 
   categories:any;
   constructor(
-    public api: ApiService
+    public api: ApiService,
   ) { }
 
   ngOnInit(): void {
