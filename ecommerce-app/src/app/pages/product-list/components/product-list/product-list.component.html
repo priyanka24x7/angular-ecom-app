@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="filter"></div>
+    <div class="products-list"  *ngFor="let item of productList">
+        <div class="lists">
+            <img src="{{item.image}}" />
+            <div class="title">{{item.title}}</div>
+            <div class="price">{{item.price}}</div>
+        </div>
+    </div>
+</div>
