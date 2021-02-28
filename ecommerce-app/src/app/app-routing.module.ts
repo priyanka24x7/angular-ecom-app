@@ -15,6 +15,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'product/view',
+    loadChildren: () =>
+      import('./pages/product-details/product-details.module').then(
+        (m) => m.ProductDetailsModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',

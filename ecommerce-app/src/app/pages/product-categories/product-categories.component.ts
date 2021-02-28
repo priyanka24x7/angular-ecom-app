@@ -24,7 +24,6 @@ export class ProductCategoriesComponent implements OnInit {
           label: item, image: `assets/images/${item.split(' ')[0]}.jpg`
         }
       });
-      console.log(this.categories);
     })
   }
 
