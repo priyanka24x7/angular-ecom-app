@@ -21,7 +21,7 @@ export class ProductCategoriesComponent implements OnInit {
     this.api.get('products/categories').subscribe((res: any[]) => {
       this.categories = res.map((item) => {
         return {
-          label: item, image: `assets/images/${item.split(' ')[0]}.jpg`
+          label: item, image: `assets/images/${item.split(' ')[0]}.png`
         }
       });
     })
