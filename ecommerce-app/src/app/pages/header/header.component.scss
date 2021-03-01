@@ -18,8 +18,21 @@ header{
     .logo{
         font-weight: normal;
         font-size: 36px;
-        span{
+        span.cart{
             color: #fc5e48;
+        }
+        img{
+            width: 60px;
+        }
+    }
+
+    @media (min-width: 767px){
+        //Desktop
+        .logo{
+            img{
+                margin-right: 10px;
+                vertical-align: sub;
+            }
         }
     }
 }

@@ -3,8 +3,9 @@
     <div class="products-list"  *ngFor="let item of productList" [routerLink]="['/product/view', item.id]">
         <div class="lists">
             <img src="{{item.image}}" />
-            <div class="title">{{item.title}}</div>
-            <div class="price">{{item.price}}</div>
+            <div class="mask rgba-black-slight"></div>
         </div>
+        <div class="title">{{item.title}}</div>
+        <div class="price">{{item.price}}</div>
     </div>
 </div>
