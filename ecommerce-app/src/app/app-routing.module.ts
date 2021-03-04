@@ -22,6 +22,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'product/cart',
+    loadChildren: () =>
+      import('./pages/cart/cart.module').then(
+        (m) => m.CartModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',

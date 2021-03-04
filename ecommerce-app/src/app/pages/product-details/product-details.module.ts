@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { ProductDetailsRoutingModule } from './product-details-routing.module';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -9,7 +10,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   declarations: [ProductDetailsComponent],
   imports: [
     CommonModule,
-    ProductDetailsRoutingModule
+    ProductDetailsRoutingModule,
+    MatSidenavModule
   ],
   exports: []
 })

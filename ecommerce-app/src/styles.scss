@@ -2,3 +2,14 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/*Primary button*/
+.btn-primary{
+    background-color: #fc5e48;
+    padding: 7px 50px;
+    font-weight: 500;
+    border: 0;
+    &:hover, &:not(:disabled):not(.disabled):active, &:focus{
+        background-color: #444;
+    }
+}
+

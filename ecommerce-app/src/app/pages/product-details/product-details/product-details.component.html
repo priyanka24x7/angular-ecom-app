@@ -1,15 +1,32 @@
 <div class="container">
-    <div class="row p-details">
-            <div class="col-6">
-                <div class="image">
-                    <img [src]="product?.image" />
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="name">{{product?.title}}</div>
-                <div class="cat">{{product?.category}}</div>
-                <div class="price">{{product?.price | currency:'USD'}}</div>
-                <div class="desc">{{product?.description}}</div>
-            </div>
+  <div class="row p-details">
+    <div class="col-6">
+      <div class="image">
+        <img [src]="product?.image" />
+      </div>
     </div>
+    <div class="col-6">
+      <div class="name">{{ product?.title }}</div>
+      <div class="cat">{{ product?.category }}</div>
+      <div class="price">{{ product?.price | currency: "USD" }}</div>
+      <div class="row">
+        <div class="col-2">
+          <div class="quantity">
+            <button>-</button>1<button>+</button>
+          </div>
+        </div>
+        <div class="col">
+          <button
+            class="btn-primary"
+            (click)="handleAddToCart()"
+            mat-raised-button
+          >
+            Add TO Bag
+          </button>
+        </div>
+        <div class="col">Add to wishlist</div>
+      </div>
+      <div class="desc">{{ product?.description }}</div>
+    </div>
+  </div>
 </div>

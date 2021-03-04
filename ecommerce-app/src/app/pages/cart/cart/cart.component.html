@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3"><img [src]="productItem?.image" width="120"/></div>
+        <div class="col-5">
+            <div>{{productItem?.title}}</div>
+            <div class="category">{{productItem?.category}}</div>
+            <div class="price">{{productItem?.price | currency}}</div>
+        </div>
+    </div>
+</div>
+

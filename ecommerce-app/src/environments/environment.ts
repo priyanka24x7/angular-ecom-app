@@ -7,6 +7,7 @@ export const environment = {
   APP: {
     BASE_URL: 'https://fakestoreapi.com/',
     DOMAIN_URL: 'http://localhost:4200',
+    
 
     // ALL API URLS
     // API_URLS
